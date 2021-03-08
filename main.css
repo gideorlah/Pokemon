@@ -22,6 +22,7 @@ h1 {
 }
 .card:hover {
     animation: bounce 1s linear;
+    cursor: pointer;
 }
 @keyframes bounce{
     20% {
@@ -59,7 +60,6 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
 }
-
 footer{
     height: 70px;
     color: white;
@@ -70,4 +70,35 @@ footer{
 footer a{
     color: turquoise;
     text-decoration: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #f4f4f4;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+button{
+    background: orangered;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    transition: transform 100ms;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 2px darkred;
 }
